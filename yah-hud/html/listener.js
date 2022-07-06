@@ -20,6 +20,12 @@ $(function() {
     }
   })
 })
+window.addEventListener('message', (event) => {
+  let data = event.data
+  if(data.action == 'setTime') {
+    document.querySelector('#time > span').innerText = data.time;
+  }
+})
 
 window.addEventListener('message', (event) => {
 	let data = event.data
