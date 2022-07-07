@@ -26,6 +26,8 @@ Citizen.CreateThread(function() -- Get current street
         x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(PlayerId()), true))
         street = GetStreetNameAtCoord(x, y, z)
         streetName = GetStreetNameFromHashKey(street)
+		zone = GetNameOfZone(x, y, z);
+		zoneLabel = GetLabelText(zone);
     end
 end)
 
@@ -46,6 +48,12 @@ Citizen.CreateThread(function()
         SendNUIMessage({
             time = hour .. ':' .. minute,
             action = 'setTime'
+        })
+
+        -- Zone --
+        SendNUIMessage({
+            zone = zoneLabel,
+            action = 'setZone'
         })
     end
 end)

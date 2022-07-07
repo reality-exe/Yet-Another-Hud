@@ -28,6 +28,13 @@ window.addEventListener('message', (event) => {
 })
 
 window.addEventListener('message', (event) => {
+  let data = event.data
+  if(data.action == 'setZone') {
+    document.querySelector('#zone > span').innerText = data.zone;
+  }
+})
+
+window.addEventListener('message', (event) => {
 	let data = event.data
 	if(data.action == 'streetLabel') {
     document.querySelector('#streetName > span').innerText = data.name;

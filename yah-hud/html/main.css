@@ -33,6 +33,16 @@
     align-items: center;
     color:white;
 }
+#zone {
+    font-size: 16px;
+    font-family: TrenchThin;
+    margin-top: -29px;
+    margin-left: 39px;
+    margin-right: 55px;
+    text-align: left;
+    align-items: center;
+    color:white;
+}
 #location {
     color: white;
     position: relative;
